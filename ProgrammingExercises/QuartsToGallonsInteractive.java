@@ -1,7 +1,13 @@
-public class QuartsToGallons {
+import java.util.Scanner;
+
+public class QuartsToGallonsInteractive {
     private static final int quartsPerGallon = 4;
     public static void main(String[] args){
-        int quartsOfPaintRequired = 69;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Input the amount of paint required: ");
+        String userInput = input.nextLine();
+
+        int quartsOfPaintRequired = Integer.parseInt(userInput);
 
         int gallonsOfPaintRequired = quartsOfPaintRequired / quartsPerGallon;
         int excessQuartsRequired = quartsOfPaintRequired % quartsPerGallon;
